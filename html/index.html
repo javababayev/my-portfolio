@@ -6,7 +6,6 @@
         <meta name="description" content="A personal web-page of Javidan Babayev to demonstrate his lifecycle and portfolio.">
         <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
         <title>Javidan Babayev's Portfolio</title>
-        <!-- <link rel="icon" href="logo.png" type="image"> -->
         <link rel="stylesheet" href="../css/index.css">
         <script src="index.js" defer></script>
     </head>
@@ -20,22 +19,22 @@
                 <section class="nav-section">
                     <ul>
                         <li>
-                            <a href='#about'>
+                            <a href='#about' title="Read about me">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a href='#my_projects'>
+                            <a href='#my_projects' title="See projects">
                                 My projects
                             </a>
                         </li>
                         <li>
-                            <a href='#adventures'>
+                            <a href='#adventures' title="See my adventures">
                                 Adventures
                             </a>
                         </li>
                         <li>
-                            <a href='#contact'>
+                            <a href='#contact' title="Contact me">
                                 Contact
                             </a>
                         </li>
@@ -46,7 +45,7 @@
         
         <main>
             <section class="main-section">
-                <a id="about">
+                <div id="about">
                     <div class="main-section-top">
                         <p>ABOUT</p>
                     </div>
@@ -64,12 +63,17 @@
                             I mostly spend my time with with graphic design, web development, and research. <br>
                             My hobby is playing tennis and discovering new people alongside new places. <br>
                         </p>
+                        <a 
+                        href="about"
+                        target="_self">
+                            Read more
+                        </a>
                     </div>
-                </a>
+                </div>
             </section>
 
             <section class="main-section">
-                <a id="my_projects">
+                <div id="my_projects">
                     <div class="main-section-top">
                         <p>MY PROJECTS</p>
                     </div>
@@ -88,13 +92,18 @@
                             </div>
                         </figure>
                     </div>
-                </a>
+                    <a 
+                        href="projects"
+                        target="_self">
+                            Read more
+                    </a>
+                </div>
             </section>
 
             <section class="main-section">
-                <a id="adventures">
+                <div id="adventures">
                     <div class="main-section-top">
-                        <p>ADVENTURES</p>
+                        <p class='section-name'> </p>
                     </div>
 
                     <div class="main-section-content">
@@ -102,26 +111,23 @@
                             
                         </figure>
                     </div>
-                </a>
-            </section>
-
-            <section class="main-section">
-                <a id="contact">
-                    <div class="main-section-top">
-                        <p>CONTACT</p>
-                    </div>
-
-                    <div class="main-section-content">
-                        <figure>
-                            
-                        </figure>
-                    </div>
-                </a>
+                </div>
             </section>
         </main>
 
         <script type="text/javascript" defer>
 
+            const sectionName = document.getElementsByClassName('.section-name');
+            let about = document.getElementsByClassName('');
+            let myProjects;
+            let adventures;
+            let contact; 
+
+            let sectionNames = ['About', 'My Projects', 'Adventures', 'Contact'];
+
+            for (const sectionName of sectionNames) {
+                sectionName.textContent = '';
+            }
 
         </script>
 
